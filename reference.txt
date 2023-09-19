@@ -1,0 +1,12 @@
+pytest -v -s -m smoke --browser_name "chrome" --env_name "staging" --product_name "chitale" --alluredir=C:\Users\harshalashok_warkar\Documents\demo_web_automation\report
+pytest -v -s -m smoke --browser_name "firefox" --env_name "staging" --product_name "chitale" --alluredir=C:\Users\harshalashok_warkar\Documents\demo_web_automation\report
+pytest -v -s -m smoke --browser_name "mobile_chrome" --env_name "staging" --product_name "chitale" --alluredir=C:\Users\harshalashok_warkar\Documents\demo_web_automation\report
+
+allure generate C:\Users\harshalashok_warkar\Documents\demo_web_automation\report --clean
+
+allure serve C:\Users\harshalashok_warkar\Documents\demo_web_automation\report
+
+pytest -v -s -m smoke --browser_name "chrome" --env_name "staging" --product_name "chitale" --html=report1.html --self-contained-html --capture=tee-sys
+
+
+addopts = -n 2
